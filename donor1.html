@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor - ShareBite</title>
+    <link rel="stylesheet" href="style_donor1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="site-name">ShareBite</h1>
+        <div class="donation-options">
+            <label for="food">Donate Food</label>
+            <input type="radio" id="food" name="donation-type" value="food">
+            <label for="money">Donate Money</label>
+            <input type="radio" id="money" name="donation-type" value="money">
+        </div>
+        <button class="button confirm-button">Confirm</button>
+    </div>
+
+    <script>
+        const confirmButton = document.querySelector('.confirm-button');
+        const foodRadio = document.getElementById('food');
+        const moneyRadio = document.getElementById('money');
+
+        confirmButton.addEventListener('click', () => {
+            if (foodRadio.checked) {
+                alert('Volunteer will arrive soon for food standard testing and delivery.');
+            } else if (moneyRadio.checked) {
+                alert('Thank you for your donation! You will get live updates soon.');
+            } else {
+                alert('Please select a donation option.');
+            }
+        });
+    </script>
+</body>
+</html>

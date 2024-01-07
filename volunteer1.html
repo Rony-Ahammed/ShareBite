@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - ShareBite</title>
+    <link rel="stylesheet" href="style_volunteer1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="site-name">ShareBite</h1>
+        <textarea class="input-field" placeholder="Food Delivery"></textarea>
+        <textarea class="input-field" placeholder="Food Standard Quality and Delivery"></textarea>
+        <button class="button confirm-button">Confirm</button>
+    </div>
+
+    <script>
+        const confirmButton = document.querySelector('.confirm-button');
+
+        confirmButton.addEventListener('click', () => {
+            const deliveryTextArea = document.querySelector('[placeholder="Food Delivery"]');
+            const standardQualityTextArea = document.querySelector('[placeholder="Food Standard Quality and Delivery"]');
+            
+            if (deliveryTextArea.value && standardQualityTextArea.value) {
+                alert('Wait until your request for delivery is being processed. You will get live updates soon.');
+            } else {
+                alert('Please fill in both fields before confirming.');
+            }
+        });
+    </script>
+</body>
+</html>
